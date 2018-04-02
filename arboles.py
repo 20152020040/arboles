@@ -15,8 +15,8 @@ def buscar(arbol,valor):
 
 def insertar (arbol,valor):
     if arbol==None:
-        return nodo(arbol.valor,insertar(arbol.izquierda,valor),arbol.derecha)
-    return nodo(arbol.valor,arbol.izquierda,insertar(arbol.derecha,valor))
+        return Nodo(arbol.valor,insertar(arbol.izquierda,valor),arbol.derecha)
+    return Nodo(arbol.valor,arbol.izquierda,insertar(arbol.derecha,valor))
 
 def inorden(arbol):
   if arbol != None:
