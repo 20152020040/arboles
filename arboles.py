@@ -25,4 +25,15 @@ def inorden(arbol):
       inorden(arbol.izquierda)
       print(arbol.valor)
       inorden(arbol.derecha)
+      
+def listar(arbol,lista):
+    if lista==[]:
+        return arbol
+    else:
+        return listar(insertar(arbol,lista[0]),lista[1:])
+    
+   
 
+
+    
+inorden(listar((Nodo(15,Nodo(10,Nodo(9)),Nodo(25, Nodo(20)))),[21,7,46,34,2000]))
