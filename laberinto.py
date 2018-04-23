@@ -10,18 +10,23 @@ def buscarX(lista):
                 return [x,y]
 
 def buscarCeros(laberinto,listax):
-    if laberinto[listax[0]-1][listax[1]]=="0":
-        ##return laberinto[listax[0]-1][listax[1]]
-        print ("oka")
-    if laberinto[listax[0]+1][listax[1]]=="0":
-        ##return laberinto[listax[0]+1][listax[1]]
-        print ("oke")
-    if laberinto[listax[0]][listax[1]-1]=="0":
-        ##return laberinto[listax[0]][listax[1]-1]
-        print ("oko")
-    if laberinto[listax[0]][listax[1]+1]=="0":
-       ## return laberinto[listax[0]][listax[1]-1]
-        print ("oki")
+    if ("x" in laberinto[listax[0]][listax[1]] or "0" in laberinto[listax[0]][listax[1]]):
+        #if laberinto[listax[0]-1][listax[1]]=="0":
+            #print ("arrib")
+            #return buscarCeros(laberinto,(listax[0]-1,listax[1])) 
+        if laberinto[listax[0]+1][listax[1]]=="0":
+            print ("abaj")
+            listarep.append([listax])
+            print(listarep)
+            return buscarCeros(laberinto,(listax[0]+1,listax[1])) 
+        ##if laberinto[listax[0]][listax[1]-1]=="0":
+            #print ("izq")
+            #return buscarCeros(laberinto,(listax[0],listax[1]-1))
+        if laberinto[listax[0]][listax[1]+1]=="0":
+            print ("dere")
+            listarep.append([listax])
+            print(listarep)
+            return buscarCeros(laberinto,(listax[0],listax[1]+1))
     
 
 
